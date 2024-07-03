@@ -1,0 +1,23 @@
+.banner-container {
+    width: 100%;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .panel-1 {
+    width: 100%;
+    min-height: 300px; /* Adjust based on your design */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: #eee; /* Example background */
+  }
+  
+  @media (max-width: 768px) {
+    .panel-1 {
+      font-size: 1.5rem; /* Smaller text for smaller screens */
+    }
+  }
+  
