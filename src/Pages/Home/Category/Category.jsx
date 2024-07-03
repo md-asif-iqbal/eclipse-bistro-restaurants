@@ -26,7 +26,7 @@ const Category = () => {
           >
             
           </SectionTitle>
-          <div className='lg:mt-10 lg:mb-10'>
+          <div className='justify-center items-center justify-items-center' >
             {/* <h1 className='text-yellow-400 text-center italic'>---From 11:00am to 10:00pm---</h1>
             <hr className="h-1 bg-gray-200 mx-auto my-4 md:w-3/4 lg:w-1/3 xl:w-1/4" />
             <h1 className='text-center md:text-xl lg:text-3xl xl:text-4xl uppercase p-1 '>ORDER ONLINE</h1>

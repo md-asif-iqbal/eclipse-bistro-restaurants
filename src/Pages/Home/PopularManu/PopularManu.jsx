@@ -17,12 +17,17 @@ const PopularManu = () => {
                 subHeading={"---Check it out---"}
                 heading={"FROM OUR MENU"}>
                 </SectionTitle>
-                <div className=" items-center 2xl:ml-28 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 p-4">
+                <div className=" justify-center items-center justify-items-center mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 p-4">
                     {
                         menu.map(item => <MenuItems
                         key={item._id}
                         item = {item}></MenuItems>)
                     }
+                </div>
+                <div className="flex justify-center items-center h-full md:mt-8">
+                    <button className="btn bg-white border-0 border-y-2 btn-wide sm:btn-sm md:btn-md uppercase">
+                        View full menu
+                    </button>
                 </div>
            </section>
 
