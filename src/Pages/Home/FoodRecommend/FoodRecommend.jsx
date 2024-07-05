@@ -28,7 +28,8 @@ const FoodRecommend = () => {
                         <h2 className="card-title">{item.name}</h2>
                         <p>{item.recipe}</p>
                         <div className="card-actions justify-center">
-                        <button className="btn bg-white hover:bg-slate-900 hover:text-yellow-600 px-8 uppercase">Add To Cart</button>
+                        <button className="btn bg-white hover:bg-slate-900
+                         hover:text-yellow-600 px-12 uppercase border-0 border-b-4 border-yellow-600">Add To Cart</button>
                         </div>
                     </div>
             </div>
