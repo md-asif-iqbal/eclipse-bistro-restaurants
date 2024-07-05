@@ -5,6 +5,7 @@ import Featured from "../Featured/Featured";
 import FoodRecommend from "../FoodRecommend/FoodRecommend";
 import HeroSection from "../HeroSection/HeroSection";
 import PopularManu from "../PopularManu/PopularManu";
+import Review from "../Review/Review";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <CallUS></CallUS>
             <FoodRecommend></FoodRecommend>
             <Featured></Featured>
+            <Review></Review>
         </div>
     );
 };
