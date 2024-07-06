@@ -1,6 +1,6 @@
 import SectionTitle from "../../../Components/SectionTitle";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { FaComments } from "react-icons/fa";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -29,6 +29,7 @@ const Review = () => {
                             reviews.map(reviews => <SwiperSlide key={reviews._id}
                             >
                                 <div className="my-16 mx-24 flex flex-col items-center ">
+                                <FaComments size={70} className="mb-5"/>
                                 <Rating
                                 style={{ maxWidth: 180 }}
                                 value={reviews.rating}

@@ -1,17 +1,23 @@
-
+import { IoMdContact } from "react-icons/io";
 
 const NavBar = () => {
     const navOptions =
                     <>
-                        <li><a>Item 1</a></li>
-                        <li>
-                        <a>Parent</a>
+                        <li><a>Home</a></li>
+                    <li><a>Our Menu</a></li>
+                    <li><a>Dashboard</a></li>
+                    <li><a>Contact Us</a></li>
+                    <li><a>Our Shop</a></li>
+                    {/* <li>
+                        <details>
+                        <summary>Parent</summary>
                         <ul className="p-2">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
                         </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        </details>
+                    </li> */}
+                    <li><a>Login</a></li>
                     </>
     return (
         <div>
@@ -40,10 +46,14 @@ const NavBar = () => {
                     </div>
                     <a className="btn btn-ghost text-xl">Eclipse Bistro</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
+                <div className="navbar-end hidden lg:flex">
+                    <ul className="justify-center items-center  menu-horizontal gap-10 mx-10 px-1 uppercase font-bold hover:bg-transparent cursor-pointer">
+                    <li className="hover:text-yellow-400"><a>Home</a></li>
+                    <li className="hover:text-yellow-400"><a>Our Menu</a></li>
+                    <li className="hover:text-yellow-400"><a>Dashboard</a></li>
+                    <li className="hover:text-yellow-400"><a>Contact Us</a></li>
+                    <li className="hover:text-yellow-400"><a>Our Shop</a></li>
+                    {/* <li>
                         <details>
                         <summary>Parent</summary>
                         <ul className="p-2">
@@ -51,13 +61,13 @@ const NavBar = () => {
                             <li><a>Submenu 2</a></li>
                         </ul>
                         </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    </li> */}
+                    <li className="flex justify-center items-center gap-2"><a className="hover:text-yellow-400 ">Login</a> <IoMdContact size={35}/></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                {/* <div className="navbar-end">
                     <a className="btn">Button</a>
-                </div>
+                </div> */}
             </div>
         </div>
     );
