@@ -1,11 +1,12 @@
 import banner4 from "../../../assets/home/chef-service.jpg"
 import { useEffect, useState } from "react";
+import MenuItems from "../../Shared/MenuItems/MenuItems";
 const Desserts = () => {
-    const [ offers, setOffers]= useState([])
+    const [ desserts, setDessert]= useState([])
     useEffect( ()=>{
         fetch('menu.json').then(res => res.json()).then(data => {
-            const offerItems = data.filter(item => item.category === 'offered');
-            setOffers(offerItems)})
+            const offerItems = data.filter(item => item.category === 'dessert');
+            setDessert(offerItems)})
     }, [])
     return (
         <div>
@@ -27,7 +28,7 @@ const Desserts = () => {
                 <section >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8  md:px-36 justify-center items-center justify-items-center mx-auto  p-4">
                     {
-                        offers.map(item => <MenuItems
+                        desserts.map(item => <MenuItems
                         key={item._id}
                         item = {item}></MenuItems>)
                     }
