@@ -26,7 +26,7 @@ const Desserts = () => {
                 </div>
                 </div>
                 <section >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8  md:px-36 justify-center items-center justify-items-center mx-auto  p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8  lg:px-80  justify-center items-center justify-items-center mx-auto  p-4">
                     {
                         desserts.map(item => <MenuItems
                         key={item._id}

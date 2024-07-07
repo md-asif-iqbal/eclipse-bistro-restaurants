@@ -17,7 +17,7 @@ const PopularManu = () => {
                 subHeading={"---Check it out---"}
                 heading={"FROM OUR MENU"}>
                 </SectionTitle>
-                <div className=" justify-center items-center justify-items-center mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 p-4">
+                <div className=" justify-center items-center lg:px-80 justify-items-center mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 p-4">
                     {
                         menu.map(item => <MenuItems
                         key={item._id}
