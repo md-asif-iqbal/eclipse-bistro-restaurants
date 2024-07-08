@@ -1,22 +1,24 @@
-
-const MenuItems = ({item}) => {
-    const { name, image, price, recipe} = item;
-    // console.log(item)
+const MenuItems = ({ item }) => {
+    const { name, image, price, recipe } = item;
+  
     return (
-        <div className="flex space-x-2 mx-auto">
-            <img style={{ 
-                    borderRadius: '0 200px 200px 220px',
-                    '@media (max-width: 768px)': { borderRadius: '0 150px 150px 180px' }, // Tablet and below
-                    '@media (max-width: 480px)': { borderRadius: '0 100px 100px 120px' }  // Mobile devices
-                    }}
- className="w-[100px]" src={image} alt="" />
-            <div>
-                <h3>{name} <span> ---------------</span></h3>
-                <p>{recipe}</p>
-            </div>
-            <p className="text-yellow-600">${price}</p>
+      <div className="flex flex-col md:flex-row md:space-x-4 items-center md:items-start space-y-4 md:space-y-0 p-4">
+        <img
+          className="w-[100px] md:w-[150px] lg:w-[200px] rounded-[0_200px_200px_220px] md:rounded-[0_150px_150px_180px] lg:rounded-[0_100px_100px_120px]"
+          src={image}
+          alt={name}
+        />
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold">
+            {name}
+            <span className="ml-2 text-gray-400">---------------</span>
+          </h3>
+          <p className="text-sm text-gray-700">{recipe}</p>
         </div>
+        <p className="text-yellow-600 text-lg font-bold">${price}</p>
+      </div>
     );
-};
-
-export default MenuItems;
+  };
+  
+  export default MenuItems;
+  

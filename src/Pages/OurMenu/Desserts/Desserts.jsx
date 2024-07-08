@@ -10,7 +10,7 @@ const Desserts = () => {
     }, [])
     return (
         <div>
-             <div className="">
+            <div className="">
                 <div
                 className="relative flex justify-center items-center lg:h-screen bg-cover bg-center"
                 style={{ backgroundImage: `url(${banner4})` }}
@@ -26,7 +26,7 @@ const Desserts = () => {
                 </div>
                 </div>
                 <section >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8  lg:px-80  justify-center items-center justify-items-center mx-auto  p-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:px-40 2xl:px-80 justify-center items-center p-4">
                     {
                         desserts.map(item => <MenuItems
                         key={item._id}

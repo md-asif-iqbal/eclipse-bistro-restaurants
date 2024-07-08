@@ -46,8 +46,8 @@ const NavBar = () => {
                     </div>
                     <a className="btn btn-ghost text-xl">Eclipse Bistro</a>
                 </div>
-                <div className="navbar-end hidden lg:flex">
-                    <ul className="justify-center items-center  menu-horizontal gap-10 mx-10 px-1 uppercase font-bold hover:bg-transparent cursor-pointer">
+                <div className="navbar-end hidden lg:flex w-full">
+                    <ul className="justify-center items-center  menu-horizontal md:gap-6 xl:gap-10  px-1 uppercase font-bold hover:bg-transparent cursor-pointer">
                     <li className="hover:text-yellow-400"><a>Home</a></li>
                     <li className="hover:text-yellow-400"><a>Our Menu</a></li>
                     <li className="hover:text-yellow-400"><a>Dashboard</a></li>
