@@ -1,5 +1,5 @@
 
-import pizza1 from "../../../assets/menu/pizza-bg.jpg"
+import soup from "../../../assets/menu/soup-bg.jpg"
 import MenuItems from "../../Shared/MenuItems/MenuItems";
 import useMenu from "../../../Hooks/useMenu";
 
@@ -12,7 +12,7 @@ const Soups = () => {
                         <div className="mt-2 lg:mt-8 lg:mb-8 mb-3">
             <div
             className="relative flex bg-fixed justify-center items-center lg:h-screen bg-cover bg-center"
-            style={{ backgroundImage: `url(${pizza1})` }}
+            style={{ backgroundImage: `url(${soup})` }}
             >
             <div className=" bg-black  text-white bg-opacity-60 p-8 mt-5 mb-5 md:p-12 lg:p-20 xl:p-28  rounded-lg shadow-lg max-w-screen-lg w-full  mx-4">
                 <h1 className="text-2xl md:text-5xl lg:text-6xl font-serif text-center mb-4 md:mb-6 uppercase">

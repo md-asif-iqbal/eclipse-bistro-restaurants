@@ -1,5 +1,5 @@
 import useMenu from "../../../Hooks/useMenu";
-import banner4 from "../../../assets/home/chef-service.jpg"
+import dessert from "../../../assets/menu/dessert-bg.jpeg"
 
 import MenuItems from "../../Shared/MenuItems/MenuItems";
 import { Parallax } from 'react-parallax';
@@ -13,12 +13,12 @@ const Desserts = () => {
                 
                 <Parallax
                     blur={{ min: -15, max: 15 }}
-                    bgImage={banner4}
+                    bgImage={dessert}
                     bgImageAlt="the Dessert Image"
                     strength={-200}>
                 <div
                 className="relative bg-fixed flex justify-center items-center lg:h-screen bg-cover bg-center"
-                style={{ backgroundImage: `url(${banner4})` }}
+                style={{ backgroundImage: `url(${dessert})` }}
                 >
                 <div className=" bg-black  text-white bg-opacity-50 p-8 mt-5 mb-5 md:p-12 lg:p-20 xl:p-28   rounded-lg shadow-lg max-w-screen-lg w-full  mx-4">
                     <h1 className="text-2xl md:text-5xl lg:text-6xl font-serif text-center mb-4 md:mb-6 uppercase">
