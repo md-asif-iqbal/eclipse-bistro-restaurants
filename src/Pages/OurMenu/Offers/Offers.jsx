@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
+
 import SectionTitle from "../../../Components/SectionTitle";
 import MenuItems from "../../Shared/MenuItems/MenuItems";
+import useMenu from "../../../Hooks/useMenu";
 
 
 const Offers = () => {
-    const [ offers, setOffers]= useState([])
-    useEffect( ()=>{
-        fetch('menu.json').then(res => res.json()).then(data => {
-            const offerItems = data.filter(item => item.category === 'offered');
-            setOffers(offerItems)})
-    }, [])
+    const [menu] = useMenu();
+    const offerItems = menu.filter(item => item.category === 'offered');
     return (
         <div className="w-full md:mb-10">
             <SectionTitle subHeading="---Don't miss---"
@@ -17,7 +14,7 @@ const Offers = () => {
             <section >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:px-40 2xl:px-80 justify-center items-center p-4">
                     {
-                        offers.map(item => <MenuItems
+                        offerItems.map(item => <MenuItems
                         key={item._id}
                         item = {item}></MenuItems>)
                     }

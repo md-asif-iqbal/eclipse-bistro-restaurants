@@ -6,11 +6,14 @@ import FoodRecommend from "../FoodRecommend/FoodRecommend";
 import HeroSection from "../HeroSection/HeroSection";
 import PopularManu from "../PopularManu/PopularManu";
 import Review from "../Review/Review";
-
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div>
+             <Helmet>
+                <title>Eclipse Bistro | Home</title>
+            </Helmet>
             <Banner></Banner>
             <Category></Category>
             <HeroSection></HeroSection>

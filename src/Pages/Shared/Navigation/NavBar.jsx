@@ -1,23 +1,15 @@
 import { IoMdContact } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     const navOptions =
                     <>
-                        <li><a>Home</a></li>
-                    <li><a>Our Menu</a></li>
-                    <li><a>Dashboard</a></li>
-                    <li><a>Contact Us</a></li>
-                    <li><a>Our Shop</a></li>
-                    {/* <li>
-                        <details>
-                        <summary>Parent</summary>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                        </details>
-                    </li> */}
-                    <li><a>Login</a></li>
+                    <li className="hover:text-yellow-400"><Link to='/'>Home</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/dashboard'>Dashboard</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/contact'>Contact Us</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/menu'>Our Menu</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/shop'>Our Shop</Link></li>
+                    <li className="flex justify-center items-center gap-2"><Link to='/login' className="hover:text-yellow-400 ">Login</Link></li>
                     </>
     return (
         <div>
@@ -48,21 +40,14 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex w-full">
                     <ul className="justify-center items-center  menu-horizontal md:gap-6 xl:gap-10  px-1 uppercase font-bold hover:bg-transparent cursor-pointer">
-                    <li className="hover:text-yellow-400"><a>Home</a></li>
-                    <li className="hover:text-yellow-400"><a>Our Menu</a></li>
-                    <li className="hover:text-yellow-400"><a>Dashboard</a></li>
-                    <li className="hover:text-yellow-400"><a>Contact Us</a></li>
-                    <li className="hover:text-yellow-400"><a>Our Shop</a></li>
-                    {/* <li>
-                        <details>
-                        <summary>Parent</summary>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                        </details>
-                    </li> */}
-                    <li className="flex justify-center items-center gap-2"><a className="hover:text-yellow-400 ">Login</a> <IoMdContact size={35}/></li>
+                    <li className="hover:text-yellow-400"><Link to='/'>Home</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/dashboard'>Dashboard</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/contact'>Contact Us</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/menu'>Our Menu</Link></li>
+                    <li className="hover:text-yellow-400"><Link to='/shop'>Our Shop</Link></li>
+            
+                    <li className="flex justify-center items-center gap-2"><Link to='login' className="hover:text-yellow-400 ">
+                    Login</Link> <IoMdContact size={35}/></li>
                     </ul>
                 </div>
                 {/* <div className="navbar-end">

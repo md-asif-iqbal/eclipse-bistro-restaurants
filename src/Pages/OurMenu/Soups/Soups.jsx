@@ -1,19 +1,17 @@
-import { useEffect, useState } from "react";
+
 import pizza1 from "../../../assets/menu/pizza-bg.jpg"
 import MenuItems from "../../Shared/MenuItems/MenuItems";
+import useMenu from "../../../Hooks/useMenu";
 
 const Soups = () => {
-    const [ soups, setSoups]= useState([])
-    useEffect( ()=>{
-        fetch('menu.json').then(res => res.json()).then(data => {
-            const soupItems = data.filter(item => item.category === 'soup');
-            setSoups(soupItems)})
-    }, [])
+    const [menu] = useMenu();
+    const soupItems = menu.filter(item => item.category === 'soup');
+
     return (
         <div>
-                        <div className="mt-2 lg:mt-8">
+                        <div className="mt-2 lg:mt-8 lg:mb-8 mb-3">
             <div
-            className="relative flex justify-center items-center lg:h-screen bg-cover bg-center"
+            className="relative flex bg-fixed justify-center items-center lg:h-screen bg-cover bg-center"
             style={{ backgroundImage: `url(${pizza1})` }}
             >
             <div className=" bg-black  text-white bg-opacity-60 p-8 mt-5 mb-5 md:p-12 lg:p-20 xl:p-28  rounded-lg shadow-lg max-w-screen-lg w-full  mx-4">
@@ -29,7 +27,7 @@ const Soups = () => {
             </div>
             <section>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:px-40 2xl:px-80 justify-center items-center p-4">
-                    {soups.map(item => (
+                    {soupItems.map(item => (
                     <MenuItems key={item._id} item={item} />
                     ))}
                 </div>

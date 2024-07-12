@@ -1,18 +1,23 @@
+import useMenu from "../../../Hooks/useMenu";
 import banner4 from "../../../assets/home/chef-service.jpg"
-import { useEffect, useState } from "react";
+
 import MenuItems from "../../Shared/MenuItems/MenuItems";
+import { Parallax } from 'react-parallax';
 const Desserts = () => {
-    const [ desserts, setDessert]= useState([])
-    useEffect( ()=>{
-        fetch('menu.json').then(res => res.json()).then(data => {
-            const offerItems = data.filter(item => item.category === 'dessert');
-            setDessert(offerItems)})
-    }, [])
+    const [menu] = useMenu();
+    const desserts = menu.filter(item => item.category === 'dessert');
+ 
     return (
         <div>
             <div className="">
+                
+                <Parallax
+                    blur={{ min: -15, max: 15 }}
+                    bgImage={banner4}
+                    bgImageAlt="the Dessert Image"
+                    strength={-200}>
                 <div
-                className="relative flex justify-center items-center lg:h-screen bg-cover bg-center"
+                className="relative bg-fixed flex justify-center items-center lg:h-screen bg-cover bg-center"
                 style={{ backgroundImage: `url(${banner4})` }}
                 >
                 <div className=" bg-black  text-white bg-opacity-50 p-8 mt-5 mb-5 md:p-12 lg:p-20 xl:p-28   rounded-lg shadow-lg max-w-screen-lg w-full  mx-4">
@@ -25,6 +30,8 @@ const Desserts = () => {
                     </p>
                 </div>
                 </div>
+                </Parallax>
+
                 <section >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:px-40 2xl:px-80 justify-center items-center p-4">
                     {

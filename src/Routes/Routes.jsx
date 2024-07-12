@@ -14,10 +14,12 @@ import OurMenu from "../Pages/OurMenu/OurMenu/OurMenu";
         path:"/",
         element: <Home/> ,
 
-       },{
-        path:"/OUR-MENU",
+       },
+       {
+        path:"/menu",
         element:<OurMenu/>,
-       },{
+       },
+       {
         
        }
 
